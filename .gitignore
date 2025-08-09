@@ -1,3 +1,10 @@
 backend/firebase-service-account.json
 backend/firebase-service-account.json
 .vercel
+node_modules/
+.env
+__pycache__/
+*.pyc
+build/
+dist/
+
