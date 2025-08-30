@@ -1,0 +1,38 @@
+{
+  "name": "sharenear",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "lint": "next lint",
+    "test": "echo \"No tests specified\" && exit 0",
+    "postbuild": "echo 'Build completed successfully'",
+    "docker:build": "docker build -f Dockerfile.prod -t sharenear:latest .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env.production sharenear:latest",
+    "deploy:local": "./deploy.sh",
+    "deploy:prod": "./deploy.sh latest production deploy"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
+    "next": "^14.2.32",
+    "qrcode.react": "^3.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "simple-peer": "^9.11.1",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.5.6",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  }
+}

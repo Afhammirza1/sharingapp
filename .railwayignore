@@ -1,0 +1,90 @@
+# Railway ignore file - excludes files from deployment
+
+# Development files
+.env.local
+.env.development
+.env.test
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Build outputs (will be rebuilt)
+.next/
+out/
+dist/
+build/
+
+# Documentation (not needed in production)
+docs/
+*.md
+!README.md
+
+# Test files
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# Development tools
+.prettierrc*
+.eslintrc*
+jest.config.*
+cypress/
+.cypress/
+
+# Git
+.git/
+.gitignore
+
+# Docker (not needed for Railway)
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Kubernetes (not needed for Railway)
+k8s/
+kubernetes/
+*.yaml
+*.yml
+!railway.json
+!nixpacks.toml
+
+# Terraform
+terraform/
+*.tf
+*.tfstate*
+
+# Local deployment scripts
+deploy.sh
+scripts/
