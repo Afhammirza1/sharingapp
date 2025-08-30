@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: sharenear
+    env: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: HOST
+        value: 0.0.0.0
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MAX_FILE_SIZE
+        value: 10737418240
+      - key: UPLOAD_DIR
+        value: /tmp/uploads
+      - key: ALLOWED_FILE_TYPES
+        value: "*"
+      - key: STUN_SERVERS
+        value: "stun:stun.l.google.com:19302,stun:stun1.l.google.com:19302"
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100
+      - key: ENABLE_ANALYTICS
+        value: false
+      - key: ENABLE_FILE_ENCRYPTION
+        value: true
+      - key: ENABLE_USER_REGISTRATION
+        value: false
+      - key: ENABLE_ROOM_PERSISTENCE
+        value: false
+      - key: DEBUG
+        value: false
+      - key: LOG_LEVEL
+        value: info
+    healthCheckPath: /api/health

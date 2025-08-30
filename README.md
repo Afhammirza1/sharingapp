@@ -29,7 +29,7 @@ A secure, real-time file sharing application with WebRTC support, built with Nex
 - **Real-time Communication**: WebRTC, Socket.io
 - **Styling**: CSS3 with custom properties, Tailwind CSS
 - **File Handling**: JSZip for bulk downloads
-- **Deployment**: Docker, Kubernetes ready
+- **Deployment**: Render ready
 
 ## 📦 Installation
 
